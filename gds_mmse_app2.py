@@ -30,7 +30,7 @@ def classify_mmse(score):
 gds_label, gds_icon, gds_msg, gds_color = classify_gds(gds)
 mmse_label, mmse_icon, mmse_msg, mmse_color = classify_mmse(mmse)
 
-st.subheader("判定結果")
+st.subheader("【判定結果】")
 
 st.markdown(f"### MMSE：**{mmse}点** {mmse_icon}")
 st.markdown(f"**分類**：{mmse_label}　　**説明**：{mmse_msg}")
@@ -78,6 +78,6 @@ advice_dict = {
     ("重度うつの可能性", "重度認知症"): "心の元気と記憶・判断力の低下がともに強く見られる可能性があります。安全で穏やかな生活環境を周囲の協力のもとで整え、本人が安心して過ごせることを第一に考えましょう。",
 }
 
-st.subheader("【あなたのスコアに基づく今後のアドバイス🍀】")
+st.subheader("【あなたのスコアに基づく今後のアドバイス】")
 advice = advice_dict.get((gds_label, mmse_label), "現在の状態に応じて専門家にご相談ください。")
 st.markdown(f" {advice}")
