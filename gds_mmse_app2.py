@@ -79,5 +79,5 @@ advice_dict = {
 }
 
 st.subheader("あなたのスコアに基づく今後のアドバイス")
-advice = advice_dict.g🖋et((gds_label, mmse_label), "現在の状態に応じて専門家にご相談ください。")
-st.markdown(f"🖋 {advice}")
+advice = advice_dict.get((gds_label, mmse_label), "現在の状態に応じて専門家にご相談ください。")
+st.markdown(f" {advice}")
