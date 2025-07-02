@@ -39,3 +39,18 @@ st.progress(mmse / 30)
 st.markdown(f"### GDS：**{gds}点** {gds_icon}")
 st.markdown(f"**分類**：{gds_label}　　**説明**：{gds_msg}")
 st.progress(gds / 15)
+
+# 色付きバーをmatplotlibで表示（カラーバー部分）
+def colored_bar(score, max_score, color, title):
+    fig, ax = plt.subplots(figsize=(5, 0.4))
+    ax.barh([0], [score], color=color, edgecolor='black')
+    ax.set_xlim(0, max_score)
+    ax.set_yticks([])
+    ax.set_xticks([])
+    ax.set_title(f"{title}: {score} / {max_score}", fontsize=10)
+    plt.tight_layout()
+    st.pyplot(fig)
+
+st.subheader("スコア可視化（カラーバー）")
+colored_bar(mmse, 30, mmse_color, "MMSE")
+colored_bar(gds, 15, gds_color, "GDS")
