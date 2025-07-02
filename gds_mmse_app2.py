@@ -51,7 +51,7 @@ def colored_bar(score, max_score, color, title):
     plt.tight_layout()
     st.pyplot(fig)
 
-st.subheader("スコア可視化（カラーバー）")
+st.subheader("【スコア可視化（カラーバー）】")
 colored_bar(mmse, 30, mmse_color, "MMSE")
 colored_bar(gds, 15, gds_color, "GDS")
 
