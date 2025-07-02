@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="GDS・MMSE 判定ツール", layout="centered")
-st.title("健康状態簡易判定ツール(GDS・MMSE)")
+st.title("健康状態簡易判定ツール")
 
 gds = st.number_input("GDSスコア（0〜15）を入力", min_value=0, max_value=15, value=0)
 mmse = st.number_input("MMSEスコア（0〜30）を入力", min_value=0, max_value=30, value=30)
